@@ -29,25 +29,25 @@ public class PlayerFragment1 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇18讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇18讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇36讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇36讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇72讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇72讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇108讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇108讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇128讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇128讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇256讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇256讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇1024讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇1024讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇进阶课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇进阶课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇冲刺课：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇冲刺课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
         videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇火箭班：这时候应该立刻怎么办？对，立刻放弃考研！",713));
+                "考研数学-张宇火箭班：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
     }
 
     @Nullable
@@ -89,14 +89,17 @@ public class PlayerFragment1 extends Fragment {
 
                 final VideoDetail video = videoList.get(position);
                 // 图片
-                ImageView imageViewLeft = (ImageView) itemview.findViewById(R.id.video_cover);
-                imageViewLeft.setImageResource(video.getCoverPath());
-                // 简介
-                TextView introductionTextView = (TextView) itemview.findViewById(R.id.video_title);
-                introductionTextView.setText(video.getVideoTitle());
-                // 记录
-                TextView recordTextViewLeft = (TextView) itemview.findViewById(R.id.video_watch_num);
-                recordTextViewLeft.setText(video.getWatchNum());
+                ImageView videoCover = (ImageView) itemview.findViewById(R.id.video_cover);
+                videoCover.setImageResource(video.getCoverPath());
+                // 标题
+                TextView videoTitle = (TextView) itemview.findViewById(R.id.video_title);
+                videoTitle.setText(video.getVideoTitle());
+                // 标签
+                TextView videoTag = (TextView) itemview.findViewById(R.id.video_tag);
+                videoTag.setText(video.getVideoTag());
+                // 观看人数
+                TextView VideoWatchNum = (TextView) itemview.findViewById(R.id.video_watch_num);
+                VideoWatchNum.setText(video.getWatchNum());
 
                 // 点击事件
                 CardView cardView = itemview.findViewById(R.id.video_card);
