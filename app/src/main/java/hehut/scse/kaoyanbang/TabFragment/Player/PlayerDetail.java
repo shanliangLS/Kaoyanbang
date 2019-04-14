@@ -15,7 +15,8 @@ import hehut.scse.kaoyanbang.R;
 public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> {
     StandardGSYVideoPlayer detailPlayer;
 
-    private String url = "http://wdquan-space.b0.upaiyun.com/VIDEO/2018/11/22/ae0645396048_hls_time10.m3u8";
+//    private String url = "http://wdquan-space.b0.upaiyun.com/VIDEO/2018/11/22/ae0645396048_hls_time10.m3u8";
+    private String url = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

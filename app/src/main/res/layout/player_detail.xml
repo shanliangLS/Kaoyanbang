@@ -1,36 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/post_detail_nested_scroll"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true">
+        android:layout_height="wrap_content">
+        <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+            android:id="@+id/detail_player"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/post_media_height"/>
+    </android.support.design.widget.AppBarLayout>
 
+    <!--下半部分-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<com.tencent.smtt.sdk.WebView
+                android:id="@+id/view_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isScrollContainer="false"
+                android:overScrollMode="never"
+                android:scrollbars="vertical"/>-->
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/ll_detail_bottom"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_bottom_height">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/post_media_height" />
-
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            android:orientation="horizontal"
+            >
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"/>
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/tv_detail_bottom_like"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/detail_text"
-                android:textSize="16sp" />
-
+                android:textColor="@color/bottom_text"
+                android:drawableTop="@mipmap/ic_daily_like"
+                android:drawablePadding="3dp"
+                android:text="@string/detail_bottom_like"/>
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"/>
+            <TextView
+                android:id="@+id/tv_detail_bottom_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bottom_text"
+                android:drawableTop="@mipmap/ic_daily_comment"
+                android:drawablePadding="3dp"
+                android:text="@string/detail_bottom_commit"/>
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"/>
+            <TextView
+                android:id="@+id/tv_detail_bottom_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bottom_text"
+                android:drawableTop="@mipmap/ic_daily_share"
+                android:drawablePadding="3dp"
+                android:text="@string/detail_bottom_share"/>
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"/>
         </LinearLayout>
-
-    </android.support.v4.widget.NestedScrollView>
-
-    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
-        android:id="@+id/detail_player"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/post_media_height" />
-
-</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="top"
+            android:background="#e8e8e8"/>
+    </FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/selector_like"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/nsv_scroller"
+        app:layout_anchorGravity="center|end" />
+</android.support.design.widget.CoordinatorLayout>

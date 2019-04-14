@@ -18,6 +18,8 @@
     <color name="colorPlayerToolbar">#ffffff</color>
     <color name="colorPlayerToolbarFalse">#555</color>
     <color name="colorPlayerToolbarFalseGray">#ddd</color>
+    <!--视频播放界面-->
+    <color name="bottom_text">#a9a9a9</color>
 
     <color name="drawer_header_text">#2c2c2c</color>
     <color name="drawer_item_bg_n">#fffff9</color>
