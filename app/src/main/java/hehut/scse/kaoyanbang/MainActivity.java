@@ -1,17 +1,22 @@
 package hehut.scse.kaoyanbang;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import hehut.scse.kaoyanbang.TabFragment.CustomScrollViewPager;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment1;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment2;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment3;
@@ -19,7 +24,7 @@ import hehut.scse.kaoyanbang.TabFragment.TabFragment3;
 public class MainActivity extends AppCompatActivity {
 
     // ViewPager
-    private ViewPager mViewPager;
+    private CustomScrollViewPager mViewPager;
     // 适配器
     private FragmentPagerAdapter mAdapter;
     // 装载fragment
@@ -34,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_dashboard:
                     mViewPager.setCurrentItem(0);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_home:
                     mViewPager.setCurrentItem(1);
                     return true;
                 case R.id.navigation_notifications:
@@ -58,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         initTabFragment();
+        mViewPager.setCurrentItem(1);
     }
 
     // 初始化Fragment适配器
@@ -95,5 +101,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

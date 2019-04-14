@@ -10,6 +10,6 @@
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="页面1"/>
+        android:text="刷视频"/>
 
 </LinearLayout>
