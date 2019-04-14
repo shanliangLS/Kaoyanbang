@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="logoScreenBackground">#F7F7F7</color>
+    <color name="colorCursor">#cccccc</color>
+    <color name="colorLoginButton">#004684</color>
 </resources>
