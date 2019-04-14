@@ -8,4 +8,7 @@
     <dimen name="post_media_height">200dp</dimen>
 
     <dimen name="drawer_image_height">180dp</dimen>
+
+    <dimen name="video_introduction">14sp</dimen>
+    <dimen name="video_watch_num">12sp</dimen>
 </resources>
