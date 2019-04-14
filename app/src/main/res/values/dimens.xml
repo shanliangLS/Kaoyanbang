@@ -6,4 +6,6 @@
     <dimen name="player_toolbar">16sp</dimen>
 
     <dimen name="post_media_height">200dp</dimen>
+
+    <dimen name="drawer_image_height">180dp</dimen>
 </resources>

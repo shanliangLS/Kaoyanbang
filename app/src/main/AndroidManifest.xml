@@ -24,6 +24,8 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".TabFragment.Player.PlayerDetail" />
+        <activity android:name=".other.SettingActivity"/>
+        <activity android:name=".other.AboutActivity"/>
     </application>
 
 </manifest>

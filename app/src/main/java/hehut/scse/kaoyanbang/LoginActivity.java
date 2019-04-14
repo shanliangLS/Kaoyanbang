@@ -12,8 +12,8 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import hehut.scse.kaoyanbang.config.Config;
 import hehut.scse.kaoyanbang.helper.InfoHelper;
+import hehut.scse.kaoyanbang.helper.NetworkHelper;
 
 public class LoginActivity extends Activity {
 
@@ -70,11 +70,8 @@ public class LoginActivity extends Activity {
         });
     }
 
-    private boolean isLogin(String name, String password) {
-        if (name.equals("guis") && password.equals("guis")) {
-            return true;
-        }
-        return false;
+    private boolean isLogin(String username, String password) {
+        return NetworkHelper.isLogin(username, password);
     }
 
 
