@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
     <color name="logoScreenBackground">#F7F7F7</color>
     <color name="colorCursor">#cccccc</color>
     <color name="colorLoginButton">#004684</color>
+
+
+
+
+    <color name="drawer_header_text">#2c2c2c</color>
+    <color name="drawer_item_bg_n">#fffff9</color>
+    <color name="drawer_item_bg_p">#e8e8e8</color>
+
+
 </resources>

@@ -1,17 +1,14 @@
 package hehut.scse.kaoyanbang;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +19,8 @@ import hehut.scse.kaoyanbang.TabFragment.TabFragment2;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment3;
 
 public class MainActivity extends AppCompatActivity {
+
+//    Toolbar mToolbar;
 
     // ViewPager
     private CustomScrollViewPager mViewPager;
@@ -58,8 +57,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        mToolbar = findViewById(R.id.toolbar);
+//        mToolbar.setTitle("考研帮");
+//        mToolbar.setTitle(mNavigationView.getMenu().findItem(getCurrentItem(showFragment)).getTitle().toString());
+
         mViewPager = findViewById(R.id.viewpager);
-        navigation = findViewById(R.id.navigation);
+        navigation = findViewById(R.id.bottomNavigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         initTabFragment();

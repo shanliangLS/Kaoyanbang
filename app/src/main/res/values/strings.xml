@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">考研帮</string>
+    <string name="app_intro">A pure studying App for you</string>
+
+
     <string name="title_home">主页</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+
+    // main drawer
+    <string name="zhihu">知乎日报</string>
+    <string name="wechat">微信精选</string>
+    <string name="gank">干货集中营</string>
+    <string name="drawer_about">关于</string>
+    <string name="drawer_collection">收藏</string>
+    <string name="drawer_setting">设置</string>
+
+    <string name="drawer_group_options">选项</string>
+    <string name="drawer_group_content">资讯</string>
+
 </resources>
