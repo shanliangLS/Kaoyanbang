@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="hehut.scse.kaoyanbang">
 
     <application
@@ -8,7 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:appComponentFactory=""
+        tools:replace="android:appComponentFactory">
         <activity
             android:name=".StartActivity"
             android:label="@string/app_name">
@@ -20,6 +23,7 @@
         </activity>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".TabFragment.Player.PlayerDetail" />
     </application>
 
 </manifest>
