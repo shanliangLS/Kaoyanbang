@@ -8,4 +8,8 @@ public class Config {
     //
     public static final String username = "name";
     public static final String password = "password";
+
+
+    //
+    public static final String email = "1187603543@qq.com";
 }
