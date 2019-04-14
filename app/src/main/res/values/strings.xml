@@ -23,8 +23,6 @@
 
 
 
-    <string name="setting_cache">自动缓存</string>
-    <string name="setting_image">无图模式</string>
     <string name="setting_night">夜间模式</string>
     <string name="setting_feedback">意见反馈</string>
     <string name="setting_clear">清除缓存</string>
@@ -33,6 +31,7 @@
     <string name="setting_other">其他</string>
 
     <string name="about_author">作者:IT拯救者团队</string>
+    <string name="about_team">团队介绍:\n由董宇航、梁山、石凯峰、宫哲星同学组成的TEAM。</string>
     <string name="about_project">项目简介:\n考研帮,一个让考研简单、不再孤单的App\n关注考研，让考研之路简单不孤单n(*≧▽≦*)n\n该项目会持续迭代与优化,加入更丰富的阅读内容与功能,并不断尝试最新的技术,欢迎下载使用</string>
     <string name="about_info">考研帮\t\t\tV1.3.0</string>
 </resources>
