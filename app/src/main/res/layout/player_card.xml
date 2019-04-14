@@ -30,7 +30,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/zhangyu"
+                android:src="@drawable/zhangyu3"
                 android:scaleType="fitXY"/>
 
             <LinearLayout
@@ -57,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
                     <ImageView
+                        android:id="@+id/video_tag_img"
                         android:layout_width="15dp"
                         android:layout_height="17dp"
                         android:layout_marginLeft="8dp"
@@ -71,6 +72,7 @@
                         android:layout_width="15dp"
                         android:layout_height="17dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginRight="1dp"
                         android:src="@drawable/eye"/>
                     <TextView
                         android:id="@+id/video_watch_num"

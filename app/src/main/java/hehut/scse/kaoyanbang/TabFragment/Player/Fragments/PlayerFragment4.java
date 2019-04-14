@@ -28,26 +28,26 @@ public class PlayerFragment4 extends Fragment {
 
     static {
         videoList = new ArrayList<>();
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇18讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇36讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇72讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇108讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇128讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇256讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇1024讲基础课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇进阶课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇冲刺课：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
-        videoList.add(new VideoDetail(R.drawable.zhangyu,
-                "考研数学-张宇火箭班：这时候应该立刻怎么办？对，立刻放弃考研！","张宇",713));
+        videoList.add(new VideoDetail(R.drawable.zhuanye1,
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye2,
+                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye3,
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye4,
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye5,
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye1,
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye2,
+                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye3,
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye4,
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+        videoList.add(new VideoDetail(R.drawable.zhuanye5,
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
     }
 
     @Nullable
@@ -96,7 +96,13 @@ public class PlayerFragment4 extends Fragment {
                 videoTitle.setText(video.getVideoTitle());
                 // 标签
                 TextView videoTag = (TextView) itemview.findViewById(R.id.video_tag);
-                videoTag.setText(video.getVideoTag());
+                if (video.getVideoTag() == "") {
+                    ImageView videoTagImg = (ImageView) itemview.findViewById(R.id.video_tag_img);
+                    videoTagImg.setVisibility(View.GONE);
+                    videoTag.setVisibility(View.GONE);
+                } else {
+                    videoTag.setText(video.getVideoTag());
+                }
                 // 观看人数
                 TextView VideoWatchNum = (TextView) itemview.findViewById(R.id.video_watch_num);
                 VideoWatchNum.setText(video.getWatchNum());
