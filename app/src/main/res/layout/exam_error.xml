@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_common" />
+
+    <RelativeLayout
+        android:id="@+id/null_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#4555"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="没有错题记录" />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pratice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc" />
+
+            <ExpandableListView
+                android:id="@+id/test_expandableListView"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#69c8e6f0"
+                android:childDivider="@color/white" />
+        </LinearLayout>
+
+
+        <!--添加右侧竖线-->
+        <!--<ImageView-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_toRightOf="@id/left_layout"-->
+            <!--android:src="#aaaaaa" />-->
+        <!--题目与答案所在布局-->
+        <RelativeLayout
+            android:id="@+id/right_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/left_layout"
+            android:background="#69c8e6f0">
+            <!--题目-->
+            <TextView
+                android:id="@+id/test_problem_textview"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="left"
+                android:text="未初始化题目"
+                android:textSize="18sp" />
+            <!--选项区域-->
+            <LinearLayout
+                android:id="@+id/test_answer_linearlayout"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/test_problem_textview"
+                android:layout_below="@id/test_problem_textview"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/test_choice_A_checkbox"
+                    style="@style/CheckboxTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="未初始化选项" />
+
+                <CheckBox
+                    android:id="@+id/test_choice_B_checkbox"
+                    style="@style/CheckboxTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="未初始化选项" />
+
+                <CheckBox
+                    android:id="@+id/test_choice_C_checkbox"
+                    style="@style/CheckboxTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="未初始化选项" />
+
+                <CheckBox
+                    android:id="@+id/test_choice_D_checkbox"
+                    style="@style/CheckboxTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="未初始化选项" />
+
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <!--判断题选项-->
+            <!--提交按钮-->
+
+
+            <LinearLayout
+                android:id="@+id/bt_ll_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_pre_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#69c8e6f0"
+                    android:text="上一题"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/bt_next_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#66c8e6f0"
+                    android:text="下一题"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_show_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bt_ll_id"
+                android:layout_alignEnd="@+id/test_answer_linearlayout"
+                android:layout_alignRight="@+id/test_answer_linearlayout"
+                android:layout_marginBottom="18dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:text="显示答案" />
+
+            <CheckBox
+                android:id="@+id/skip_next_auto"
+                style="@style/CheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_above="@id/bt_ll_id"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:text="自动跳转到下一题" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>
