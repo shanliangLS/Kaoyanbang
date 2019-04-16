@@ -79,12 +79,12 @@ public class PlayerFragment1 extends Fragment {
 
                 // 如果缓存为空，生成新的布局作为1个item
                 if (convertView == null) {
-                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
+//                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
                     LayoutInflater videoInflater = PlayerFragment1.this.getLayoutInflater();
                     // 因为getView()返回的对象，adapter会自动赋给ListView
                     itemview = inflater.inflate(R.layout.player_card, null);
                 } else {
-                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
+//                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
                     itemview = convertView;
                 }
 

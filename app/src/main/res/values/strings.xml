@@ -44,5 +44,5 @@
     <string name="video_detail_comment">哇~感谢大家的硬币和收藏！希望我们都能考进理想的学校！\n谢谢大家能够喜欢我的第一个鬼畜视频~</string>
     <string name="detail_bottom_share">分享</string>
     <string name="detail_bottom_note">笔记</string>
-    <string name="detail_bottom_commit">讨论</string>
+    <string name="detail_bottom_commit">评论</string>
 </resources>

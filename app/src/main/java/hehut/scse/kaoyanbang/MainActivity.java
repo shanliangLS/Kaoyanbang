@@ -12,13 +12,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import hehut.scse.kaoyanbang.TabFragment.CustomScrollViewPager;
+import hehut.scse.kaoyanbang.util.CustomScrollViewPager;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment1;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment2;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment3;
