@@ -1,8 +1,11 @@
 package hehut.scse.kaoyanbang.TabFragment.Player;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -11,17 +14,45 @@ import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 import hehut.scse.kaoyanbang.R;
+import hehut.scse.kaoyanbang.util.ShareUtil;
 
 public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> {
+    FloatingActionButton fabLike;
+    TextView tvDetailBottomShare;
+
     StandardGSYVideoPlayer detailPlayer;
 
 //    private String url = "http://wdquan-space.b0.upaiyun.com/VIDEO/2018/11/22/ae0645396048_hls_time10.m3u8";
-    private String url = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
+//    private String url = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
+    // 张宇鬼畜
+    private String url = "http://upos-hz-mirrorwcsu.acgvideo.com/upgcxcode/39/42/66504239/66504239-1-6.mp4?e=ig8euxZM2rNcNbug7WdVtWug7WdVNEVEuCIv29hEn0l5QK==&deadline=1555410212&gen=playurl&nbs=1&oi=3690160096&os=wcsu&platform=html5&trid=781973517e2f4b83b09a559c92c492b2&uipk=5&upsig=31dc12d669f52ad2ba5ef6c16f6741ff&uparams=e,deadline,gen,nbs,oi,os,platform,trid,uipk";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_detail);
+
+        fabLike = findViewById(R.id.fab_like);
+        tvDetailBottomShare = findViewById(R.id.tv_detail_bottom_share);
+        Button.OnClickListener buttonListener = new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()){
+                    case R.id.fab_like:
+                        if (fabLike.isSelected()) {
+                            fabLike.setSelected(false);
+                        } else {
+                            fabLike.setSelected(true);
+                        }
+                        return;
+                    case R.id.tv_detail_bottom_share:
+                        ShareUtil.shareText(PlayerDetail.this,"baidu.com","分享一篇文章");
+                        return;
+                }
+            }
+        };
+        fabLike.setOnClickListener(buttonListener);
+        tvDetailBottomShare.setOnClickListener(buttonListener);
 
         detailPlayer = (StandardGSYVideoPlayer) findViewById(R.id.detail_player);
         //增加title
@@ -29,7 +60,6 @@ public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> 
         detailPlayer.getBackButton().setVisibility(View.GONE);
 
         initVideoBuilderMode();
-
     }
 
     @Override

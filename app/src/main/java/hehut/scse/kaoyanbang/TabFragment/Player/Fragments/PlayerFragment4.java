@@ -29,25 +29,25 @@ public class PlayerFragment4 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhuanye1,
-                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye2,
-                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+                "2020考研专业课【408计算机】","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye3,
-                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye4,
-                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye5,
-                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye1,
-                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye2,
-                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+                "2020考研专业课【408计算机】","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye3,
-                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye4,
-                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye5,
-                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*10000)));
     }
 
     @Nullable

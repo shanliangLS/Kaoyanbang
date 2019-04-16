@@ -6,9 +6,8 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/video_card"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -16,7 +15,7 @@
         android:clickable="true"
         android:onClick="onClick"
         app:cardCornerRadius="7dp"
-        app:cardElevation="0dp"
+        app:cardElevation="3dp"
         app:cardBackgroundColor="#fff">
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,15 +71,15 @@
                         android:layout_width="15dp"
                         android:layout_height="17dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginRight="1dp"
-                        android:src="@drawable/eye"/>
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/ic_video_play"/>
                     <TextView
                         android:id="@+id/video_watch_num"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="@dimen/video_attr"
-                        android:text="719人观看"/>
+                        android:text="7019"/>
                     <ImageView
                         android:layout_width="15dp"
                         android:layout_height="17dp"

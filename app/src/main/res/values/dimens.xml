@@ -9,6 +9,11 @@
     <dimen name="post_media_height">200dp</dimen>
     <dimen name="detail_bottom_height">56dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bl_user_name">14dp</dimen>
+    <dimen name="bl_user_follow">11dp</dimen>
+    <dimen name="bl_video_title">18dp</dimen>
+    <dimen name="bl_video_attr">14dp</dimen>
+    <dimen name="bl_video_brief">15dp</dimen>
 
     <dimen name="drawer_image_height">180dp</dimen>
 
