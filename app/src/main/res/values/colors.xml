@@ -25,4 +25,41 @@
     <color name="drawer_header_text">#2c2c2c</color>
     <color name="drawer_item_bg_n">#fffff9</color>
     <color name="drawer_item_bg_p">#e8e8e8</color>
+
+
+
+    <!--shikaifeng-->
+    <color name="title_bg">#13b7f6</color>
+    <color name="bottom_bg">#113646</color>
+    <color name="green">#089d08</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="food_gray">#ff2f373e</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_bg">#fff0f0f0</color>
+    <color name="light_blue">#5CACEE</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="blue">#499BF7</color>
+    <color name="bluesky">#38b7ff</color>
+    <color name="gray">#AFAFAF</color>
+    <color name="whites">#ffffff</color>
+    <color name="item_bg_color">#4d000000</color>
+    <color name="free">#19be19</color>
+    <color name="lot">#1d19bc</color>
+    <color name="busy">#ff0000</color>
+    <color name="gray_l">#f2f2f2</color>
+    <color name="sky_l">#3bb7ff</color>
+    <color name="sky_m">#4cc1fe</color>
+    <color name="sky_r">#57c9ff</color>
+    <color name="food_intro">#a7a7a7</color>
+    <color name="food_sold">#8e8e8e</color>
+    <color name="cool_gray_bg">#373447</color>
+
+    <color name="text1">#f1251b</color>
+    <color name="text2">#f18f1b</color>
+    <color name="text3">#e9f11b</color>
+    <color name="text4">#25f11b</color>
+    <color name="text5">#1b71f1</color>
+    <color name="text6">#711bf1</color>
+    <color name="text7">#ac0bbf</color>
+    <color name="bg_skf">#2E2E2E</color>
 </resources>

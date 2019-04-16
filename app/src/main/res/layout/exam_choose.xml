@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_common" />
+
+    <RelativeLayout
+        android:id="@+id/shigang"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/shigang" >
+
+        <!-- <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="中国近代史纲要"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textView1"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="开始答题>>"
+            android:textColor="#888"/> -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sixiu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/sixiu" >
+
+        <!-- <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="思想政治与道德修养"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="开始答题>>"
+            android:textColor="#888"/> -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mayuan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/mayuan" >
+
+        <!-- <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="马克思原理"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="开始答题>>"
+            android:textColor="#888"/> -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/maogai"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/maogai" >
+
+        <!-- <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="毛泽东概论"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textView4"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="开始答题>>"
+            android:textColor="#888"/> -->
+    </RelativeLayout>
+
+</LinearLayout>
