@@ -2,14 +2,14 @@ package hehut.scse.kaoyanbang.TabFragment.Player;
 
 public class PlayerDetailComment {
     private String mid;
-    private int userCover;
+    private String userCover;
     private String userName;
     private String floor;
     private String date;
     private String content;
     private String likeNum;
 
-    public PlayerDetailComment(String ui,int uc,String un,int f,String d,String c,int ln) {
+    public PlayerDetailComment(String ui,String uc,String un,int f,String d,String c,int ln) {
         mid = ui;
         userCover = uc;
         userName = un;
@@ -20,14 +20,14 @@ public class PlayerDetailComment {
     }
 
     public boolean mIdEqual(String u) {
-        if (u == mid) {
+        if (u.equals(mid)) {
             return true;
         } else {
             return false;
         }
     }
 
-    public int getUserCover() {
+    public String getUserCover() {
         return userCover;
     }
 

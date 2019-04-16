@@ -133,8 +133,4 @@
         android:layout_height="wrap_content"
         android:dividerHeight="1dp"
         android:divider="#eee"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/detail_bottom_height">
-    </View>
 </LinearLayout>

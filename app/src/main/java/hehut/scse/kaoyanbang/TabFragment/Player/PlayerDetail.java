@@ -2,11 +2,13 @@ package hehut.scse.kaoyanbang.TabFragment.Player;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,9 @@ import hehut.scse.kaoyanbang.util.ExpandListView;
 import hehut.scse.kaoyanbang.util.ShareUtil;
 
 public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> {
+    private boolean isBottomShow = true;
+    private String mid = "6159308";
+
     FloatingActionButton fabLike;
     TextView tvDetailBottomShare;
 
@@ -37,15 +42,14 @@ public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> 
     // 评论
     private static List<PlayerDetailComment> commentList;
     private ExpandListView commentListView;
-    private String mid;
 
     static {
         commentList = new ArrayList<>();
-        commentList.add(new PlayerDetailComment("6159308",R.drawable.ic_bl_user_cover,"叫我翔哥吧",146,"2018-12-17",
+        commentList.add(new PlayerDetailComment("6159308","http://i2.hdslb.com/bfs/face/c6be2bdf237d09812e233e11a152415690f3d293.jpg","叫我翔哥吧",146,"2018-12-17",
                 "哇~感谢大家的硬币和收藏！希望我们都能考进理想的学校！\n谢谢大家能够喜欢我的第一个鬼畜视频~",1551));
-        commentList.add(new PlayerDetailComment("90418629",R.drawable.ic_bl_user_cover,"村口dj吴彦祖",441,"2018-12-18",
+        commentList.add(new PlayerDetailComment("90418629","http://i2.hdslb.com/bfs/face/2b92c14a1203e3bf7c3bc77ebb6d93c53d0b3fab.jpg","村口dj吴彦祖",441,"2018-12-18",
                 "函数界限 精确刻画 ↵高阶低阶 数学归纳↵三大性质 运算方法 ↵极限计算 判别类型↵泰勒洛法 化简先行↵八个展开↵七种未定式↵加加减减送分儿题↵易于连续 归结原则 不易连续 夹逼准则↵f'关系    中值定理 拉格朗日 可导就行↵递推通项 有界准则 跳跃可去 无穷振荡↵连续间断 达到顶峰↵导微不定 反常变限 六个概念↵可导存在 三种说法 完全等价↵导数定义 几何意义 积分夹逼↵超级简单基本题↵左导右极 精确定义↵间断连续 通项关系↵积分定义 好好复习↵变上变下 有界才叫 变限积分↵广义黎曼 瑕点无穷 熟记于心↵三角指幂 方差开根 基本公式↵分部微凑 换元有理 思考程序↵最值拐点 单调增减 凹凸判别↵铅锤 水平 渐近线↵逻辑证明 三大方面 压轴考题 ↵倒背如流 十大基本定理↵有界定理 最值定理 介值定理↵零点定理 罗尔定理 费马定理↵拉格朗日 中值定理 柯西定理 ↵泰勒公式 积分定理↵主部误差 全微分值↵链式求导 结构不变↵拉格朗日 辅助乘数↵五个方程 五个函数↵曲边梯形 曲顶柱体↵把土豆切成萝卜丁↵后积定限 限内画线↵先交后交 计算上下限↵线性可分 齐次可降 六大方程↵判别散敛 展开求和 三大考点↵比较极限 达朗柯西 五种判别↵六个展开记下来↵点法连等 平面方程 曲面切面 显隐方程↵投影曲面 连立消元 方向导数 梯散旋度↵三重积分 三种计算 锥椭旋转 作为基础↵直角柱面 投影穿线 球面坐标 背下公式↵两型积分 计算公式 格林高斯 斯托克斯",2393));
-        commentList.add(new PlayerDetailComment("23246864",R.drawable.ic_bl_user_cover,"Cc橘子Soda",146,"2018-12-15",
+        commentList.add(new PlayerDetailComment("23246864","http://i0.hdslb.com/bfs/face/faf2e17d0f8ee07dc49a127e21fce09810567d1c.jpg","Cc橘子Soda",146,"2018-12-15",
                 "我该收藏到学习文件夹还是鬼畜文件夹里呢（#-_-)",1272));
     }
 
@@ -53,8 +57,6 @@ public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_detail);
-
-        mid = "6159308";
 
         fabLike = findViewById(R.id.fab_like);
         tvDetailBottomShare = findViewById(R.id.tv_detail_bottom_share);
@@ -85,6 +87,24 @@ public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> 
 
         initCommentList();
         initVideoBuilderMode();
+        initNsvScroller();
+    }
+
+    private void initNsvScroller() {
+        NestedScrollView nsvScroller = findViewById(R.id.nsv_scroller);
+        FrameLayout llDetailBottom = findViewById(R.id.ll_detail_bottom);
+        nsvScroller.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if(scrollY - oldScrollY > 0 && isBottomShow) {  //下移隐藏
+                    isBottomShow = false;
+                    llDetailBottom.animate().translationY(llDetailBottom.getHeight());
+                } else if(scrollY - oldScrollY < 0 && !isBottomShow){    //上移出现
+                    isBottomShow = true;
+                    llDetailBottom.animate().translationY(0);
+                }
+            }
+        });
     }
 
     private void initCommentList() {
@@ -123,11 +143,13 @@ public class PlayerDetail extends GSYBaseActivityDetail<StandardGSYVideoPlayer> 
                 final PlayerDetailComment comment = commentList.get(position);
                 // 头像
                 ImageView userCover = (ImageView) itemview.findViewById(R.id.comment_user_cover);
-                userCover.setImageResource(comment.getUserCover());
+                Glide.with(PlayerDetail.this).load(comment.getUserCover()).into(userCover);
+                //userCover.setImageResource(comment.getUserCover());
                 // UP标识
-                if (comment.mIdEqual(mid)) {
-                    itemview.setVisibility(View.VISIBLE);
-                }
+                /*if (comment.mIdEqual(mid)) {
+                    TextView isUP = findViewById(R.id.is_up);
+                    isUP.setVisibility(View.VISIBLE);
+                }*/
                 // 用户名
                 TextView userName = (TextView) itemview.findViewById(R.id.comment_user_name);
                 userName.setText(comment.getUserName());
