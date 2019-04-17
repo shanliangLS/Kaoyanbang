@@ -7,14 +7,14 @@
 
     <ImageView
         android:id="@+id/title_back_image"
-        android:layout_width="40dp"
+        android:layout_width="30dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="5dp" 
+        android:layout_marginLeft="8dp"
         android:src="@drawable/back"/>
 
     <ImageView
         android:id="@+id/title_add_image"
-        android:layout_width="40dp"
+        android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_marginRight="3dp"

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -154,6 +155,66 @@ private void setClick(){
 
         }
     });
+
+    selectACb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+                                     boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+                answerTv.setVisibility(View.VISIBLE);
+            }
+        }
+    });
+    selectACb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+                                     boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+                answerTv.setVisibility(View.VISIBLE);
+            }
+        }
+    });
+    selectBCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+                                     boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+                answerTv.setVisibility(View.VISIBLE);
+            }
+        }
+    });
+    selectCCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+                                     boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+                answerTv.setVisibility(View.VISIBLE);
+            }
+        }
+    });
+    selectDCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+                                     boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+                answerTv.setVisibility(View.VISIBLE);
+            }
+        }
+    });
+//    CheckBox.OnClickListener clickListener=new CheckBox.OnClickListener(){
+//        @Override
+//        public void onClick(View v) {
+//            switch(v.getId()){
+////            case R.id.select
+//            }
+//    };
+//    View.OnClickListener ViewListener = new View.OnClickListener(){
+
     nextBt.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -174,7 +235,11 @@ private void setClick(){
 //            adjustCurrentColor();
 //            Log.i("ceshi", "positionX"+Subject.positionX+",positionY"+Subject.positionY+",1");
             initProblemText(Subject.positionX, Subject.positionY);//初始化题目的文字信息
-
+            //修改
+            selectACb.setChecked(false);
+            selectBCb.setChecked(false);
+            selectCCb.setChecked(false);
+            selectDCb.setChecked(false);
         }
     });
     preBt.setOnClickListener(new View.OnClickListener() {

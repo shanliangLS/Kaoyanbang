@@ -2,6 +2,7 @@ package hehut.scse.kaoyanbang;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,11 +13,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import hehut.scse.kaoyanbang.config.Config;
 import hehut.scse.kaoyanbang.util.CustomScrollViewPager;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment1;
 import hehut.scse.kaoyanbang.TabFragment.TabFragment2;
@@ -26,7 +33,6 @@ import hehut.scse.kaoyanbang.other.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-//    Toolbar mToolbar;
 
     NavigationView mNavigationView;
 
@@ -40,11 +46,10 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
 
 
-
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
             "android.permission.READ_EXTERNAL_STORAGE",
-            "android.permission.WRITE_EXTERNAL_STORAGE" };
+            "android.permission.WRITE_EXTERNAL_STORAGE"};
 
 
     // 底部导航栏监听
@@ -62,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     mViewPager.setCurrentItem(2);
-
-
                     return true;
             }
             return false;
@@ -78,10 +81,25 @@ public class MainActivity extends AppCompatActivity {
                     "android.permission.WRITE_EXTERNAL_STORAGE");
             if (permission != PackageManager.PERMISSION_GRANTED) {
                 // 没有写的权限，去申请写的权限，会弹出对话框
-                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,REQUEST_EXTERNAL_STORAGE);
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static final String TAG = "MainActivity";
+
+    // 清除用户信息
+    private void cleanUserInfo() {
+        SharedPreferences pref = getApplication().getSharedPreferences(Config.Xml, Config.XmlModel);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.clear();
+        boolean success = editor.commit();
+        if (success) {
+            Log.e(TAG, "清除用户信息成功");
+        } else {
+            Log.e(TAG, "清除用户信息失败");
         }
     }
 
@@ -89,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         verifyStoragePermissions(MainActivity.this);
@@ -110,16 +127,21 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+                    case R.id.drawer_logout: {
+                        cleanUserInfo();
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                        break;
+                    }
                 }
                 return false;
             }
         });
 
-//        mToolbar = findViewById(R.id.toolbar);
-//        mToolbar.setTitle("考研帮");
-//        mToolbar.setTitle(mNavigationView.getMenu().findItem(getCurrentItem(showFragment)).getTitle().toString());
 
         mViewPager = findViewById(R.id.viewpager);
+
         navigation = findViewById(R.id.bottomNavigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -162,5 +184,45 @@ public class MainActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
+    }
+
+
+    // 设置退出登录
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e(TAG, "onResume");
+        String username = getUserName();
+        Log.e(TAG, "用户名为: " + username);
+        if (username == null) {
+            Log.e(TAG, "用户名为null");
+            finish();
+        }
+    }
+
+    // 得到用户名
+    private String getUserName() {
+        SharedPreferences pref = getApplication().getSharedPreferences(Config.Xml, Config.XmlModel);
+        return pref.getString(Config.username, null);
+    }
+
+    // 设置双击退出
+    private static boolean mBackKeyPressed = false;
+
+    @Override
+    public void onBackPressed() {
+        if (!mBackKeyPressed) {
+            Toast.makeText(MainActivity.this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            mBackKeyPressed = true;
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    mBackKeyPressed = false;
+                }
+            }, 2000);
+        } else {
+            finish();
+            System.exit(0);
+        }
     }
 }
