@@ -27,6 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:appComponentFactory=""
+        android:name=".xUtil.MyxUtil"
         tools:replace="android:appComponentFactory">
         <activity
             android:name=".StartActivity"
