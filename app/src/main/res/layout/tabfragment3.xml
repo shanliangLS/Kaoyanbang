@@ -87,7 +87,7 @@
                     android:background="#44ffffff"
                     android:clickable="true"
                     android:onClick="onClick">
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
                         android:background="@drawable/shape_corner_questionbank"
