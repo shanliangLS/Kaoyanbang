@@ -29,7 +29,7 @@ public class StartActivity extends Activity {
 
     private void initImage() {
         startImg = (ImageView) findViewById(R.id.start_img);
-        startImg.setImageResource(R.drawable.kaoyanbang_start);
+        startImg.setImageResource(R.drawable.kaoyanbang);
         //进行缩放动画
         ScaleAnimation scaleAnimation = new ScaleAnimation(1.4f, 1.0f, 1.4f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         scaleAnimation.setDuration(1000);
