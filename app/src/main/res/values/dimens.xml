@@ -23,4 +23,7 @@
 
     <!--首页列表-->
     <dimen name="home_card_title">18sp</dimen>
+
+    <!--做题页面-->
+    <dimen name="exam_top_button_radius">15dp</dimen>
 </resources>
