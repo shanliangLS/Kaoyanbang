@@ -35,10 +35,11 @@ import hehut.scse.kaoyanbang.TabFragment.Player.VideoDetail;
 import hehut.scse.kaoyanbang.home.Recommend0Activity;
 import hehut.scse.kaoyanbang.home.Recommend1Activity;
 import hehut.scse.kaoyanbang.home.Recommend2Activity;
+import hehut.scse.kaoyanbang.util.ExpandListView;
 
 public class TabFragment2 extends Fragment implements OnBannerListener {
     private static List<HomeCardItem> homeCardList;
-    private ListView homeCardListView;
+    private ExpandListView homeCardListView;
 
     private RefreshLayout mRefreshLayout;
 
