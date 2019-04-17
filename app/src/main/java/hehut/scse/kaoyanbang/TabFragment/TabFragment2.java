@@ -203,7 +203,7 @@ public class TabFragment2 extends Fragment implements OnBannerListener {
                 final String status = myNewsResponse.getStatus();
                 final ArrayList<MyNews> myNewsArrayList = myNewsResponse.getData();
                 if (status.equals(Config.OK)) {
-                    Toast.makeText(getActivity().getApplicationContext(), "刷新成功", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity().getApplicationContext(), "刷新成功", Toast.LENGTH_SHORT).show();
                     homeCardList.clear();
                     for (int i = 0; i < myNewsArrayList.size(); i++) {
                         MyNews myNews = myNewsArrayList.get(i);

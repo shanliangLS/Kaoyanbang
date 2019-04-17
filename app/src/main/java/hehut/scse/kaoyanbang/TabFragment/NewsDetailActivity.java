@@ -30,7 +30,7 @@ public class NewsDetailActivity extends Activity {
 
         // 设置nav标题
         textView = findViewById(R.id.tv_title);
-        textView.setText("考研咨询");
+        textView.setText("考研资讯");
         // 设置
         backButton = findViewById(R.id.btn_back);
         backButton.setOnClickListener(new View.OnClickListener() {
