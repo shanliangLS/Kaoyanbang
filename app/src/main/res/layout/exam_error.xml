@@ -44,7 +44,6 @@
                 android:id="@+id/test_expandableListView"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:background="#69c8e6f0"
                 android:childDivider="@color/white" />
         </LinearLayout>
 
@@ -59,25 +58,26 @@
         <RelativeLayout
             android:id="@+id/right_layout_2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@id/left_layout"
-            android:background="#69c8e6f0">
+            android:layout_height="match_parent">
             <!--题目-->
             <TextView
                 android:id="@+id/test_problem_textview"
-                android:layout_width="260dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
                 android:gravity="left"
                 android:text="未初始化题目"
                 android:textSize="18sp" />
             <!--选项区域-->
             <LinearLayout
                 android:id="@+id/test_answer_linearlayout"
-                android:layout_width="260dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/test_problem_textview"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
                 android:layout_below="@id/test_problem_textview"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:orientation="vertical">
@@ -87,7 +87,7 @@
                     style="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
+                    android:layout_margin="@dimen/exam_checkbox_margin"
                     android:text="未初始化选项" />
 
                 <CheckBox
@@ -95,7 +95,7 @@
                     style="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
+                    android:layout_margin="@dimen/exam_checkbox_margin"
                     android:text="未初始化选项" />
 
                 <CheckBox
@@ -103,7 +103,7 @@
                     style="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
+                    android:layout_margin="@dimen/exam_checkbox_margin"
                     android:text="未初始化选项" />
 
                 <CheckBox
@@ -111,13 +111,14 @@
                     style="@style/CheckboxTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
+                    android:layout_margin="@dimen/exam_checkbox_margin"
                     android:text="未初始化选项" />
 
                 <TextView
                     android:id="@+id/tv_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/exam_checkbox_margin"
                     android:textSize="24sp"
                     android:visibility="gone" />
 
@@ -142,7 +143,8 @@
                     android:layout_weight="1"
                     android:background="#69c8e6f0"
                     android:text="上一题"
-                    android:textSize="25sp" />
+                    android:textColor="#888"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/bt_next_title"
@@ -151,7 +153,8 @@
                     android:layout_weight="1"
                     android:background="#66c8e6f0"
                     android:text="下一题"
-                    android:textSize="25sp" />
+                    android:textColor="#888"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

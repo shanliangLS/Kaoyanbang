@@ -40,8 +40,9 @@
     <string name="player_toolbar_3">政治</string>
     <string name="player_toolbar_4">专业</string>
 
+    <string name="video_detail_brief">歌曲：克罗地亚狂想曲\n演唱：张宇\n学霸刷一遍高数，可以做几套真题\n我刷一遍高数，可以做个鬼畜\n祝今年即将考研的学霸们，一切顺利！\n第一次尝试鬼畜类视频，内容有些很简陋，还有很多要学习的地方</string>
+    <string name="video_detail_comment">哇~感谢大家的硬币和收藏！希望我们都能考进理想的学校！\n谢谢大家能够喜欢我的第一个鬼畜视频~</string>
     <string name="detail_bottom_share">分享</string>
-    <string name="detail_bottom_like">点赞</string>
+    <string name="detail_bottom_note">笔记</string>
     <string name="detail_bottom_commit">评论</string>
-    <string name="comment_expand">收起</string>
 </resources>

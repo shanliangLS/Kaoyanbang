@@ -26,13 +26,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <!--<com.tencent.smtt.sdk.WebView
-                android:id="@+id/view_main"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:isScrollContainer="false"
-                android:overScrollMode="never"
-                android:scrollbars="vertical"/>-->
+            <include layout="@layout/player_video_detail"></include>
         </FrameLayout>
     </android.support.v4.widget.NestedScrollView>
     <FrameLayout
@@ -56,9 +50,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/bottom_text"
-                android:drawableTop="@mipmap/ic_daily_like"
+                android:drawableTop="@mipmap/ic_daily_note"
                 android:drawablePadding="3dp"
-                android:text="@string/detail_bottom_like"/>
+                android:text="@string/detail_bottom_note"/>
             <android.support.v4.widget.Space
                 android:layout_width="0dp"
                 android:layout_height="1dp"

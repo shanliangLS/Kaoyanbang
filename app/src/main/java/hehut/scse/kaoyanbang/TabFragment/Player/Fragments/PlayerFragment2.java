@@ -29,25 +29,25 @@ public class PlayerFragment2 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhuwei1,
-                "跪求朱伟老师 \"词\"\"作\"之和--2014考研英语暑期助力班","朱伟",(int)(Math.random()*1000)));
+                "跪求朱伟老师 \"词\"\"作\"之和--2014考研英语暑期助力班","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei2,
-                "2019考研英语词汇精课—朱伟恋练有词","朱伟",(int)(Math.random()*1000)));
+                "2019考研英语词汇精课—朱伟恋练有词","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei3,
-                "朱伟老师考研英语词汇网络课程视频讲得好不好","朱伟",(int)(Math.random()*1000)));
+                "朱伟老师考研英语词汇网络课程视频讲得好不好","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei4,
-                "考研英语 朱伟 恋恋有词 unit 1初识词汇 精简版 2倍速 新东方在线","朱伟",(int)(Math.random()*1000)));
+                "考研英语 朱伟 恋恋有词 unit 1初识词汇 精简版 2倍速 新东方在线","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei5,
-                "2019考研英语朱伟恋练有词考研词汇(恋恋有词)","朱伟",(int)(Math.random()*1000)));
+                "2019考研英语朱伟恋练有词考研词汇(恋恋有词)","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei1,
-                "跪求朱伟老师 \"词\"\"作\"之和--2014考研英语暑期助力班","朱伟",(int)(Math.random()*1000)));
+                "跪求朱伟老师 \"词\"\"作\"之和--2014考研英语暑期助力班","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei2,
-                "2019考研英语词汇精课—朱伟恋练有词","朱伟",(int)(Math.random()*1000)));
+                "2019考研英语词汇精课—朱伟恋练有词","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei3,
-                "朱伟老师考研英语词汇网络课程视频讲得好不好","朱伟",(int)(Math.random()*1000)));
+                "朱伟老师考研英语词汇网络课程视频讲得好不好","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei4,
-                "考研英语 朱伟 恋恋有词 unit 1初识词汇 精简版 2倍速 新东方在线","朱伟",(int)(Math.random()*1000)));
+                "考研英语 朱伟 恋恋有词 unit 1初识词汇 精简版 2倍速 新东方在线","朱伟",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuwei5,
-                "2019考研英语朱伟恋练有词考研词汇(恋恋有词)","朱伟",(int)(Math.random()*1000)));
+                "2019考研英语朱伟恋练有词考研词汇(恋恋有词)","朱伟",(int)(Math.random()*10000)));
     }
 
     @Nullable
@@ -78,12 +78,12 @@ public class PlayerFragment2 extends Fragment {
 
                 // 如果缓存为空，生成新的布局作为1个item
                 if (convertView == null) {
-                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
+//                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
                     LayoutInflater videoInflater = PlayerFragment2.this.getLayoutInflater();
                     // 因为getView()返回的对象，adapter会自动赋给ListView
                     itemview = inflater.inflate(R.layout.player_card, null);
                 } else {
-                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
+//                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
                     itemview = convertView;
                 }
 

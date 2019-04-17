@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8590CF</color>
-    <color name="colorPrimaryDark">#6A6A94</color>
+    <color name="colorPrimary">#0090FF</color>
+    <color name="colorPrimaryDark">#2196F3</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorBackground">#EEEEEE</color>
@@ -20,6 +20,7 @@
     <color name="colorPlayerToolbarFalseGray">#ddd</color>
     <!--视频播放界面-->
     <color name="bottom_text">#a9a9a9</color>
+    <color name="bl_UP">#fb7299</color>
 
     <color name="drawer_header_text">#2c2c2c</color>
     <color name="drawer_item_bg_n">#fffff9</color>
@@ -28,7 +29,7 @@
 
 
     <!--shikaifeng-->
-    <color name="title_bg">#13b7f6</color>
+    <color name="title_bg">#0090FF</color>
     <color name="bottom_bg">#113646</color>
     <color name="green">#089d08</color>
     <color name="white">#FFFFFFFF</color>
@@ -61,4 +62,8 @@
     <color name="text6">#711bf1</color>
     <color name="text7">#ac0bbf</color>
     <color name="bg_skf">#2E2E2E</color>
+
+    <!--选题界面-->
+    <color name="colorTextTitle">#333333</color>
+    <color name="colorTextContent">#444444</color>
 </resources>

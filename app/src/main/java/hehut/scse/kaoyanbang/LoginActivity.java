@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import hehut.scse.kaoyanbang.helper.InfoHelper;
+import hehut.scse.kaoyanbang.config.Config;
 import hehut.scse.kaoyanbang.helper.NetworkHelper;
 
 public class LoginActivity extends Activity {
@@ -57,7 +58,7 @@ public class LoginActivity extends Activity {
                 }
                 if (isLogin(name, password)) {
                     isLoginButtonPressed = true;
-                    InfoHelper.saveInfo(LoginActivity.this, name, password);
+                    saveUserInfo(name, password);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -74,6 +75,21 @@ public class LoginActivity extends Activity {
         return NetworkHelper.isLogin(username, password);
     }
 
+    private static final String TAG = "LoginActivity";
+
+    // 保存用户信息
+    private void saveUserInfo(String name, String password) {
+        SharedPreferences pref = getApplication().getSharedPreferences(Config.Xml, Config.XmlModel);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(Config.username, name);
+        editor.putString(Config.password, password);
+        boolean success = editor.commit();
+        if (success) {
+            Log.e(TAG, "保存用户信息成功");
+        } else {
+            Log.e(TAG, "保存用户信息失败");
+        }
+    }
 
     @Override
     public void onBackPressed() {

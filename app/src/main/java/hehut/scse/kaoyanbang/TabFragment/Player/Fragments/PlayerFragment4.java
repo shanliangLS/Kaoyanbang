@@ -29,25 +29,25 @@ public class PlayerFragment4 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhuanye1,
-                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye2,
-                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+                "2020考研专业课【408计算机】","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye3,
-                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye4,
-                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye5,
-                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye1,
-                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*1000)));
+                "2020考研:计算机考研导学02-启航考研","启航",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye2,
-                "2020考研专业课【408计算机】","",(int)(Math.random()*1000)));
+                "2020考研专业课【408计算机】","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye3,
-                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*1000)));
+                "2020考研计算机:数据结构复习指南","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye4,
-                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*1000)));
+                "2020考研\"二战\"计算机全科专属vip班","",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhuanye5,
-                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*1000)));
+                "天勤数据结构考研书天勤计算机考研系列天勤高分笔记 2018 数据结构高","天勤",(int)(Math.random()*10000)));
     }
 
     @Nullable
@@ -78,12 +78,12 @@ public class PlayerFragment4 extends Fragment {
 
                 // 如果缓存为空，生成新的布局作为1个item
                 if (convertView == null) {
-                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
+//                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
                     LayoutInflater videoInflater = PlayerFragment4.this.getLayoutInflater();
                     // 因为getView()返回的对象，adapter会自动赋给ListView
                     itemview = inflater.inflate(R.layout.player_card, null);
                 } else {
-                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
+//                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
                     itemview = convertView;
                 }
 

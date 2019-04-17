@@ -29,25 +29,25 @@ public class PlayerFragment3 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhengzhi1,
-                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*1000)));
+                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi2,
-                "课程推荐2020考研公共课名师全程班【政治】(徐涛独家主讲) 适合对象","徐涛",(int)(Math.random()*1000)));
+                "课程推荐2020考研公共课名师全程班【政治】(徐涛独家主讲) 适合对象","徐涛",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi3,
-                "名师李海洋谈考研政治哲学部分冲刺复习实录","李海洋",(int)(Math.random()*1000)));
+                "名师李海洋谈考研政治哲学部分冲刺复习实录","李海洋",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi4,
-                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*1000)));
+                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi5,
-                "研途考研vip名师权威解读19考研新大纲 助力考生百日冲刺提分","研途",(int)(Math.random()*1000)));
+                "研途考研vip名师权威解读19考研新大纲 助力考生百日冲刺提分","研途",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi1,
-                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*1000)));
+                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi2,
-                "课程推荐2020考研公共课名师全程班【政治】(徐涛独家主讲) 适合对象","徐涛",(int)(Math.random()*1000)));
+                "课程推荐2020考研公共课名师全程班【政治】(徐涛独家主讲) 适合对象","徐涛",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi3,
-                "名师李海洋谈考研政治哲学部分冲刺复习实录","李海洋",(int)(Math.random()*1000)));
+                "名师李海洋谈考研政治哲学部分冲刺复习实录","李海洋",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi4,
-                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*1000)));
+                "文都2018考研万人公益讲座名师讲话实录-考研政治任燕翔","任燕翔",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhengzhi5,
-                "研途考研vip名师权威解读19考研新大纲 助力考生百日冲刺提分","研途",(int)(Math.random()*1000)));
+                "研途考研vip名师权威解读19考研新大纲 助力考生百日冲刺提分","研途",(int)(Math.random()*10000)));
     }
 
     @Nullable
@@ -78,12 +78,12 @@ public class PlayerFragment3 extends Fragment {
 
                 // 如果缓存为空，生成新的布局作为1个item
                 if (convertView == null) {
-                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
+//                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
                     LayoutInflater videoInflater = PlayerFragment3.this.getLayoutInflater();
                     // 因为getView()返回的对象，adapter会自动赋给ListView
                     itemview = inflater.inflate(R.layout.player_card, null);
                 } else {
-                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
+//                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
                     itemview = convertView;
                 }
 

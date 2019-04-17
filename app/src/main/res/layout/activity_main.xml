@@ -18,7 +18,7 @@
             tools:context=".MainActivity">
 
             <!-- ViewPager-->
-            <hehut.scse.kaoyanbang.TabFragment.CustomScrollViewPager
+            <hehut.scse.kaoyanbang.util.CustomScrollViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

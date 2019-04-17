@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -29,25 +30,25 @@ public class PlayerFragment1 extends Fragment {
     static {
         videoList = new ArrayList<>();
         videoList.add(new VideoDetail(R.drawable.zhangyu1,
-                "考研数学-张宇18讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇18讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu2,
-                "考研数学-张宇36讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇36讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu3,
-                "考研数学-张宇72讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇72讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu4,
-                "考研数学-张宇108讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇108讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu1,
-                "考研数学-张宇256讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇256讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu2,
-                "考研数学-张宇512讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇512讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu3,
-                "考研数学-张宇1024讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇1024讲基础课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu4,
-                "考研数学-张宇进阶课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇进阶课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu1,
-                "考研数学-张宇冲刺课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇冲刺课：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
         videoList.add(new VideoDetail(R.drawable.zhangyu2,
-                "考研数学-张宇火箭班：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*1000)));
+                "考研数学-张宇火箭班：这种情况立马怎么办？对，立马放弃考研！","张宇",(int)(Math.random()*10000)));
     }
 
     @Nullable
@@ -78,12 +79,12 @@ public class PlayerFragment1 extends Fragment {
 
                 // 如果缓存为空，生成新的布局作为1个item
                 if (convertView == null) {
-                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
+//                    Log.i("videoListInfo:", "没有缓存，重新生成" + position);
                     LayoutInflater videoInflater = PlayerFragment1.this.getLayoutInflater();
                     // 因为getView()返回的对象，adapter会自动赋给ListView
                     itemview = inflater.inflate(R.layout.player_card, null);
                 } else {
-                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
+//                    Log.i("goodsListInfo:", "有缓存，不需要重新生成" + position);
                     itemview = convertView;
                 }
 

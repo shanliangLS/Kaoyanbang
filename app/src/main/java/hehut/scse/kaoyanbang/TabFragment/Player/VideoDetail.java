@@ -10,7 +10,7 @@ public class VideoDetail {
         coverPath = c;
         videoTitle = v;
         videoTag = t;
-        watchNum = w + "人观看";
+        watchNum = w + "";
     }
 
     public void setCoverPath(int coverPath) {
