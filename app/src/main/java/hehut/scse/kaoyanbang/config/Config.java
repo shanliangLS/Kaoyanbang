@@ -12,4 +12,8 @@ public class Config {
 
     //
     public static final String email = "1187603543@qq.com";
+
+    public static final String OK = "OK";
+    public static final String FAIL = "FAIL";
+    public static final String ERROR = "ERROR";
 }
