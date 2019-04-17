@@ -9,12 +9,14 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -60,13 +62,53 @@ public class TabFragment3 extends Fragment {
         //        Intent intent = new Intent(getActivity(), ExamChooseActivity.class);
 //        startActivity(intent);
 
-        Button button=view.findViewById(R.id.but1);
+        /*Button button=view.findViewById(R.id.but1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 set();
             }
-        });
+        });*/
+        LinearLayout linearLayout1 = view.findViewById(R.id.question_bank_1);
+        LinearLayout linearLayout2 = view.findViewById(R.id.question_bank_2);
+        LinearLayout linearLayout3 = view.findViewById(R.id.question_bank_3);
+        LinearLayout linearLayout4 = view.findViewById(R.id.question_bank_4);
+        View.OnClickListener ViewListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()){
+                    case R.id.question_bank_1:
+                        set();
+                        return;
+                    case R.id.question_bank_2:
+                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        return;
+                    case R.id.question_bank_3:
+                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        return;
+                    case R.id.question_bank_4:
+                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        return;
+                }
+            }
+        };
+        linearLayout1.setOnClickListener(ViewListener);
+        linearLayout2.setOnClickListener(ViewListener);
+        linearLayout3.setOnClickListener(ViewListener);
+        linearLayout4.setOnClickListener(ViewListener);
+        /*final Toolbar toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });*/
+
+        //状态栏透明和间距处理
+        /*StatusBarUtil.immersive(this);
+        StatusBarUtil.setPaddingSmart(this, toolbar);
+        StatusBarUtil.setPaddingSmart(this, findViewById(R.id.profile));
+        StatusBarUtil.setPaddingSmart(this, findViewById(R.id.blurView));*/
 
         return view;
     }

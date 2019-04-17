@@ -27,4 +27,8 @@
     <!--做题页面-->
     <dimen name="exam_top_button_radius">15dp</dimen>
     <dimen name="exam_checkbox_margin">15dp</dimen>
+
+    <!--选题界面-->
+    <dimen name="textsize_content">14sp</dimen>
+    <dimen name="textsize_title">17sp</dimen>
 </resources>

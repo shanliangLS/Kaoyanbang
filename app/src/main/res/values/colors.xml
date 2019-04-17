@@ -62,4 +62,8 @@
     <color name="text6">#711bf1</color>
     <color name="text7">#ac0bbf</color>
     <color name="bg_skf">#2E2E2E</color>
+
+    <!--选题界面-->
+    <color name="colorTextTitle">#333333</color>
+    <color name="colorTextContent">#444444</color>
 </resources>
