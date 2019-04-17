@@ -236,7 +236,7 @@ public class ErrorExamActivity extends Activity {
                                                          null, position[GROUP_POSITION],
                                                          position[CHILD_POSITION] - 1, 0);
                                              }
-                                             expandCurrentGroup();
+//                                             expandCurrentGroup();
                                          }
                                      }
 
