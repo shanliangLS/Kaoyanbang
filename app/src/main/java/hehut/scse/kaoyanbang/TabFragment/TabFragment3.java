@@ -50,9 +50,9 @@ public class TabFragment3 extends Fragment {
     private RelativeLayout mayuanButton;
     private int tempUnitCount = 0;
     private String tempFileDirName;
-    public  Context mContext;
+    public Context mContext;
     private ImageView backImage;
-    public  static int flag=0;
+    public static int flag = 0;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,21 +73,21 @@ public class TabFragment3 extends Fragment {
         LinearLayout linearLayout2 = view.findViewById(R.id.question_bank_2);
         LinearLayout linearLayout3 = view.findViewById(R.id.question_bank_3);
         LinearLayout linearLayout4 = view.findViewById(R.id.question_bank_4);
-        View.OnClickListener ViewListener = new View.OnClickListener(){
+        View.OnClickListener ViewListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch(v.getId()){
+                switch (v.getId()) {
                     case R.id.question_bank_1:
                         set();
                         return;
                     case R.id.question_bank_2:
-                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        set();
                         return;
                     case R.id.question_bank_3:
-                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        set();
                         return;
                     case R.id.question_bank_4:
-                        Toast.makeText(getActivity(), "该题库暂未开放",Toast.LENGTH_SHORT).show();
+                        set();
                         return;
                 }
             }
@@ -113,7 +113,7 @@ public class TabFragment3 extends Fragment {
         return view;
     }
 
-    private void set(){
+    private void set() {
 //        if (flag==0){
 //            flag=1;
 //            return view;
@@ -121,7 +121,7 @@ public class TabFragment3 extends Fragment {
 //        }
 
 
-        this.mContext=getContext();
+        this.mContext = getContext();
 
 
         String firstPath = null;
@@ -138,7 +138,7 @@ public class TabFragment3 extends Fragment {
         final String shigangMultipleChoice = "historyMultipleChoice";
         final String shigangJudgeChoice = "historyJudgeChoice";
         final String finalFirstPath2 = firstPath;
-        String str=" People hope that they can find ____ soon。\n" +
+        String str = " People hope that they can find ____ soon。\n" +
                 "A.good\n" +
                 "B.way\n" +
                 "C.peace\n" +
@@ -261,20 +261,20 @@ public class TabFragment3 extends Fragment {
 
         FileOutputStream fos = null;
         try {
-            FileOutputStream fos1 = mContext.openFileOutput("historySingleChoice0.txt",Context.MODE_PRIVATE);
-            BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(fos1,"GB2312"));
+            FileOutputStream fos1 = mContext.openFileOutput("historySingleChoice0.txt", Context.MODE_PRIVATE);
+            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(fos1, "GB2312"));
             bufferedWriter.write("英语\n");
             bufferedWriter.write(str);
             bufferedWriter.flush();
 
-            fos1 = mContext.openFileOutput("historyMultipleChoice0.txt",Context.MODE_PRIVATE);
-            bufferedWriter=new BufferedWriter(new OutputStreamWriter(fos1,"GB2312"));
+            fos1 = mContext.openFileOutput("historyMultipleChoice0.txt", Context.MODE_PRIVATE);
+            bufferedWriter = new BufferedWriter(new OutputStreamWriter(fos1, "GB2312"));
             bufferedWriter.write("多选\n");
             bufferedWriter.write(str);
             bufferedWriter.flush();
 
 
-            str=
+            str =
                     "近代资本—帝国主义列强对中国的侵略，首先和主要的是进行军事侵略。     \n" +
                             "A\n" +
                             " 在近代历次侵华战争中，外国侵略者屠杀了大批中国人。                 \n" +
@@ -313,8 +313,8 @@ public class TabFragment3 extends Fragment {
                             "B\n" +
                             " 近代中国海关的高级职员，全部由外国人充任。                       \n" +
                             "A\n";
-            fos1 = mContext.openFileOutput("historyJudgeChoice0.txt",Context.MODE_PRIVATE);
-            bufferedWriter=new BufferedWriter(new OutputStreamWriter(fos1,"GB2312"));
+            fos1 = mContext.openFileOutput("historyJudgeChoice0.txt", Context.MODE_PRIVATE);
+            bufferedWriter = new BufferedWriter(new OutputStreamWriter(fos1, "GB2312"));
             bufferedWriter.write("判断\n");
             bufferedWriter.write(str);
             bufferedWriter.flush();
@@ -347,7 +347,7 @@ public class TabFragment3 extends Fragment {
 //                            public void onFinish() {
 
 
-        if (new File(finalFirstPath2  + "" + shigangSingleChoice + "0.txt").exists()) {//+ shigangDirName
+        if (new File(finalFirstPath2 + "" + shigangSingleChoice + "0.txt").exists()) {//+ shigangDirName
 
 //                                    String path1 = mContext.getFilesDir() + "/Dxsbang/" + shigangDirName + "/";
 
@@ -374,13 +374,13 @@ public class TabFragment3 extends Fragment {
                 fileInputStream = mContext.openFileInput("historySingleChoice0.txt");
 //                                        FileInputStream fileInputStream = new FileInputStream(fis);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream, "GB2312"));
-                Log.i("shi", reader.readLine()+"石凯峰");
+                Log.i("shi", reader.readLine() + "石凯峰");
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-            }catch (UnsupportedEncodingException e) {
+            } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
-            }catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 //
@@ -400,13 +400,13 @@ public class TabFragment3 extends Fragment {
             for (int i = 0; i < shigangUnitCount; i++) {//读取文件内容到list里
                 singleHistoryList[i] = getSaveList(shigangDirName, shigangSingleChoice + i + ".txt", false);
                 multipleHistoryList[i] = getSaveList(shigangDirName, shigangMultipleChoice + i + ".txt", false);
-                judgeHistoryList[i] = getSaveList(shigangDirName , shigangJudgeChoice+ i + ".txt", true);
+                judgeHistoryList[i] = getSaveList(shigangDirName, shigangJudgeChoice + i + ".txt", true);
                 singleHistoryAllList.addAll(singleHistoryList[i]);
                 multipleHistoryAllList.addAll(multipleHistoryList[i]);
                 judgeHistoryAllList.addAll(judgeHistoryList[i]);
             }
-            Log.i("ceshi", "史纲: 执行"+singleHistoryAllList.size());
-            for (int i=0;i<singleHistoryAllList.size();i++){
+            Log.i("ceshi", "史纲: 执行" + singleHistoryAllList.size());
+            for (int i = 0; i < singleHistoryAllList.size(); i++) {
                 Log.i("shi", singleHistoryAllList.get(i).getTitle());
             }
 
@@ -417,10 +417,11 @@ public class TabFragment3 extends Fragment {
 //
 //            ExamDetailsActivity.actionStart(mContext, shigangSingleChoice, shigangMultipleChoice, shigangJudgeChoice, shigangUnitCount, shigangDirName);
         } else {
-            Log.i("ceshi", finalFirstPath2  + "" + shigangSingleChoice + "0.txt");
+            Log.i("ceshi", finalFirstPath2 + "" + shigangSingleChoice + "0.txt");
             Toast.makeText(mContext, "该题库尚未更新，请查看其他题库", Toast.LENGTH_SHORT).show();
         }
     }
+
     /**
      * 获取一个文件中的题库
      * 注意:!!!!!!
@@ -432,7 +433,7 @@ public class TabFragment3 extends Fragment {
     private ArrayList<Subject> getSaveList(String dirName, String fileName, boolean isJudgeProblem) {
         ArrayList<Subject> unitProblemList = new ArrayList<>();
         try {
-            String path = mContext.getFilesDir()  + "/";//+ "/Dxsbang/" + dirName
+            String path = mContext.getFilesDir() + "/";//+ "/Dxsbang/" + dirName
             File targetFile = new File(path, fileName);
             FileInputStream fileInputStream = new FileInputStream(targetFile);
             BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream, "GB2312"));
