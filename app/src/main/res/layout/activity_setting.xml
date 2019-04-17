@@ -38,21 +38,22 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_night" />
+                    android:src="@mipmap/ic_cache" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
-                    android:text="@string/setting_night" />
+                    android:text="自动缓存" />
 
                 <android.support.v7.widget.AppCompatCheckBox
                     android:id="@+id/cb_setting_night"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/abc_btn_check_material"
-                    android:buttonTint="@color/colorAccent" />
+                    android:buttonTint="@color/colorAccent"
+                    android:checked="true" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
