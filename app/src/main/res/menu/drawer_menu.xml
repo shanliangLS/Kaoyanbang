@@ -6,7 +6,7 @@
                 android:id="@+id/drawer_zhihu"
                 android:checkable="true"
                 android:checked="true"
-                android:icon="@mipmap/ic_drawer_zhihu"
+                android:icon="@mipmap/ic_drawer_like"
                 android:title="@string/zhihu" />
             <!--<item-->
             <!--android:id="@+id/drawer_wechat"-->

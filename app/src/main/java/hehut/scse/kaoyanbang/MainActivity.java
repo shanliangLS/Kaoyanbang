@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_dashboard:
-                    mViewPager.setCurrentItem(0);
+                    mViewPager.setCurrentItem(1);
                     return true;
                 case R.id.navigation_home:
-                    mViewPager.setCurrentItem(1);
+                    mViewPager.setCurrentItem(0);
                     return true;
                 case R.id.navigation_notifications:
                     mViewPager.setCurrentItem(2);
@@ -124,15 +124,16 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         initTabFragment();
-        mViewPager.setCurrentItem(1); // 设置默认页
+        mViewPager.setCurrentItem(0); // 设置默认页
     }
 
     // 初始化Fragment适配器
     private void initTabFragment() {
         mFragments = new ArrayList<>();
-        mFragments.add(new TabFragment1());
         mFragments.add(new TabFragment2());
+        mFragments.add(new TabFragment1());
         mFragments.add(new TabFragment3());
+
 
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
