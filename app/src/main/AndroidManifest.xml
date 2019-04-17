@@ -49,6 +49,7 @@
         <activity android:name=".home.Recommend0Activity" />
         <activity android:name=".home.Recommend1Activity" />
         <activity android:name=".home.Recommend2Activity" />
+        <activity android:name=".RegisterActivity" />
 
     </application>
 
