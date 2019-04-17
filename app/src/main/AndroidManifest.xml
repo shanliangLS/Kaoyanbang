@@ -45,6 +45,9 @@
         <activity android:name=".TabFragment.Practice.ExamActivity.ExamChooseActivity" />
         <activity android:name=".TabFragment.Practice.ExamActivity.ErrorExamActivity" />
         <activity android:name=".TabFragment.Practice.ExamActivity.ExamDetailsActivity" />
+        <activity android:name=".home.Recommend0Activity" />
+        <activity android:name=".home.Recommend1Activity" />
+        <activity android:name=".home.Recommend2Activity" />
 
     </application>
 

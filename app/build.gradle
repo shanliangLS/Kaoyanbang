@@ -47,4 +47,11 @@ dependencies {
 
     // 圆角+阴影
     implementation 'com.android.support:cardview-v7:28.0.0'
+
+    // 轮播依赖
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
 }
